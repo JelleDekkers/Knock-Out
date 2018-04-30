@@ -7,8 +7,10 @@ public class Glove : MonoBehaviour {
 
     private Vector3 positionPrevFrame;
 
-    private void OnTriggerEnter(Collider other) {
-        Debug.Log("hit: " + other.gameObject.name + " force: " + Helper.GetVelocity(transform.position, positionPrevFrame));
+    private void OnTriggerEnter(Collider collider) {
+        IPunchable punchableObject = collider.gameObject.GetInterface<IPunchable>();
+        if (punchableObject != null)
+            punchableObject.Hit(new PunchInfo(collider, transform.position, Helper.GetVelocity(transform.position, positionPrevFrame)));
     }
 
     private void LateUpdate() {
