@@ -28,11 +28,11 @@ public class BlockManager : MonoBehaviour {
                (Mathf.Abs(leftGlove.transform.rotation.z - rightGlove.transform.rotation.z) < maxZRotation);
     }
 
-    private void OnGUI() {
-        GUILayout.BeginVertical();
-        GUILayout.Label("CONDITIONS MET: " + conditionsMet.runTimeValue);
-        GUILayout.Label("Distance " + Vector3.Distance(rightGlove.position, leftGlove.position));
-        GUILayout.Label("angle dif X " + Mathf.Abs(leftGlove.transform.rotation.x - rightGlove.transform.rotation.x));
-        GUILayout.EndVertical();
-    }
+    //private void OnGUI() {
+    //    GUILayout.BeginVertical();
+    //    GUILayout.Label("CONDITIONS MET: " + conditionsMet.runTimeValue);
+    //    GUILayout.Label("Distance " + Vector3.Distance(rightGlove.position, leftGlove.position));
+    //    GUILayout.Label("angle dif X " + Mathf.Abs(leftGlove.transform.rotation.x - rightGlove.transform.rotation.x));
+    //    GUILayout.EndVertical();
+    //}
 }
