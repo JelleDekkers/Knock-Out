@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/021_Controller_GrabbingObjectsWithJoints 1.unity
+- path: Assets/Scenes/ShieldTest.unity
   isLoaded: 1
   isActive: 1
