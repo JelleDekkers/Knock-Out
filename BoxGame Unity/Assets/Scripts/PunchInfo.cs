@@ -13,5 +13,4 @@ public class PunchInfo  {
         this.position = position;
         this.velocity = velocity;
     }
-
 }

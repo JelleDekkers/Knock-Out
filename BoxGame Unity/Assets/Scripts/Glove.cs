@@ -9,8 +9,10 @@ public class Glove : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         IPunchable punchableObject = collider.gameObject.GetInterface<IPunchable>();
-        if (punchableObject != null)
-            punchableObject.Hit(new PunchInfo(collider, transform.position, Helper.GetVelocity(transform.position, positionPrevFrame)));
+        if (punchableObject != null) {
+            float velocity = Helper.GetVelocity(transform.position, positionPrevFrame);
+            punchableObject.Hit(new PunchInfo(collider, transform.position, velocity));
+        }
     }
 
     private void LateUpdate() {
