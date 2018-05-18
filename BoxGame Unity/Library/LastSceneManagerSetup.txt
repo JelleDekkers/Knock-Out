@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ShieldTest.unity
-  isLoaded: 1
-  isActive: 1
+- path: Assets/Scenes/ActiveRagdollTest.unity
+  isLoaded: 0
+  isActive: 0
