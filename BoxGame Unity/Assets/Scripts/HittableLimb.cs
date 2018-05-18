@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class HittableLimb : MonoBehaviour, IPunchable {
 
-    public FloatVariable damagePercentage;
+    public FloatVariable damageMultiplier;
     public Action<PunchInfo, float> onHit;
+    public FloatVariable damageMax;
+    public FloatVariable damagePerVelocity;
 
     private Player player;
 
@@ -13,8 +15,13 @@ public class HittableLimb : MonoBehaviour, IPunchable {
     }
 
     public void Hit(PunchInfo info) {
-        float multiplier = info.velocity / 100 * damagePercentage.runTimeValue;
         if (onHit != null)
-            onHit.Invoke(info, multiplier);
+            onHit.Invoke(info, CalculateDamage(info.velocity, damageMultiplier.runTimeValue));
+    }
+
+    private float CalculateDamage(float velocity, float multiplier) {
+        Debug.Log(velocity);
+        float damage = velocity * damagePerVelocity.runTimeValue / 100 * multiplier;
+        return (damage > damageMax.runTimeValue) ? damageMax.runTimeValue : damage;
     }
 }

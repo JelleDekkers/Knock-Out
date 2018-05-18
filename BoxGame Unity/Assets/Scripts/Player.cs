@@ -7,8 +7,6 @@ public class Player : MonoBehaviour {
     public float startingHealth = 100;
     // syncVar?
     public float healthPoints;
-    public FloatVariable damageMax;
-    public FloatVariable damagePerVelocity;
 
     private void Start() {
         healthPoints = startingHealth;
@@ -17,19 +15,11 @@ public class Player : MonoBehaviour {
             limb.onHit += ProcessHit;
     }
 
-    public void ProcessHit(PunchInfo info, float damageMultiplier) {
-        float damage = CalculateDamage(info.velocity, damageMultiplier);
+    public void ProcessHit(PunchInfo info, float damage) {
         healthPoints -= damage;
         Debug.Log("damage: " + damage);
         if (healthPoints <= 0)
             KnockOut();
-    }
-
-    private float CalculateDamage(float velocity, float multiplier) {
-        float damage = velocity * damagePerVelocity.runTimeValue * multiplier;
-        if (damage > damageMax.runTimeValue)
-            damage = damageMax.runTimeValue;
-        return damage;
     }
 
     private void KnockOut() {

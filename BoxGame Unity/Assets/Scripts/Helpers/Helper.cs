@@ -4,10 +4,6 @@ using UnityEngine;
 
 public static class Helper {
 
-	public static float GetVelocity(Vector3 position, Vector3 positionPrevFrame) {
-        return (position - positionPrevFrame).magnitude / Time.deltaTime;
-    }
-
     public static float ClampAngle(float angle, float min, float max) {
         if (min < 0 && max > 0 && (angle > max || angle < min)) {
             angle -= 360;
