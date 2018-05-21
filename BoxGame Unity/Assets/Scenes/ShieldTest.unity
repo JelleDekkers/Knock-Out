@@ -222,9 +222,35 @@ Prefab:
       propertyPath: shieldObject
       value: 
       objectReference: {fileID: 415728669}
+    - target: {fileID: 114655288394490196, guid: e4ee05a28757993449b22d5ba7813dbc,
+        type: 2}
+      propertyPath: maxBlockTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655288394490196, guid: e4ee05a28757993449b22d5ba7813dbc,
+        type: 2}
+      propertyPath: minChargeNecessaryForBlock
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4ee05a28757993449b22d5ba7813dbc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &791411912 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1060249643328780, guid: 464931e8fda790c42913d8b31bf4477b,
+    type: 2}
+  m_PrefabInternal: {fileID: 645610986}
+--- !u!114 &791411913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791411912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6635a93b84481d44b8afe52a78cf9e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1215355337
 Prefab:
   m_ObjectHideFlags: 0
@@ -263,10 +289,6 @@ Prefab:
     - target: {fileID: 4279727327972182, guid: 7d681900b63f49542a5ffdfdedda966c, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4279727327972182, guid: 7d681900b63f49542a5ffdfdedda966c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d681900b63f49542a5ffdfdedda966c, type: 2}

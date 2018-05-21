@@ -54,8 +54,12 @@ MonoBehaviour:
   rightGlove: {fileID: 0}
   leftGlove: {fileID: 0}
   shieldObject: {fileID: 0}
-  conditionsMet: {fileID: 11400000, guid: 196906b33f6cee440afe349d32a66528, type: 2}
   maxDistanceBetweenGloves: 0.2
   maxYRotation: 0.4
   maxZRotation: 0.4
   maxXRotation: 0.2
+  isBlocking: {fileID: 11400000, guid: 196906b33f6cee440afe349d32a66528, type: 2}
+  maxBlockTime: {fileID: 11400000, guid: 22f0308f856500a47b8ea987e7870405, type: 2}
+  minChargeNecessaryForBlock: {fileID: 11400000, guid: 2d25718c9074e7941860b91ea914029e,
+    type: 2}
+  blockCharge: {fileID: 11400000, guid: f66dae0b9e5ce8648b06baac3215e622, type: 2}

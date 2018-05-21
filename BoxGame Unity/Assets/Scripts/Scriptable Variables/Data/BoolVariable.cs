@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BoolVariable : ScriptableObject, ISerializationCallbackReceiver {
 
-    [NonSerialized]
+    //[NonSerialized]
     public bool runTimeValue;
     public bool initialValue;
 

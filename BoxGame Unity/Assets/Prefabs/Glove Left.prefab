@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136328108974623176}
   - component: {fileID: 54987979741358808}
   - component: {fileID: 114622557662406048}
+  - component: {fileID: 114455558366048986}
   m_Layer: 0
   m_Name: Glove_Left
   m_TagString: Untagged
@@ -129,6 +130,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &114455558366048986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304839875514906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3087a0e2781dcaa49bb7f17dc994d96e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: be2f4696e5c20354ca3d213658a28874, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114622557662406048}
+        m_MethodName: AddCharge
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114622557662406048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,8 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959de4c485589e64e8122bbd43392f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerVelocity: {fileID: 11400000, guid: 2001ef88a451cf04a8b439df6984941b, type: 2}
-  damageMax: {fileID: 11400000, guid: 56efb4dc5b737634bab6f5cd80b08b23, type: 2}
+  charge: {fileID: 11400000, guid: e41a9bfe0b0d53c4f99f5cce37621bd0, type: 2}
+  isEnabled: 0
+  chargeMax: 5
 --- !u!136 &136328108974623176
 CapsuleCollider:
   m_ObjectHideFlags: 1

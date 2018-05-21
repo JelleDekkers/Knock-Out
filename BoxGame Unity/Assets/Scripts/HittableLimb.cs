@@ -16,12 +16,11 @@ public class HittableLimb : MonoBehaviour, IPunchable {
 
     public void Hit(PunchInfo info) {
         if (onHit != null)
-            onHit.Invoke(info, CalculateDamage(info.velocity, damageMultiplier.runTimeValue));
+            onHit.Invoke(info, CalculateDamage(info.velocity, damageMultiplier.runTimeValue, info.charge));
     }
 
-    private float CalculateDamage(float velocity, float multiplier) {
-        Debug.Log(velocity);
-        float damage = velocity * damagePerVelocity.runTimeValue / 100 * multiplier;
+    private float CalculateDamage(float velocity, float damageMultiplier, float charge) {
+        float damage = velocity * damagePerVelocity.runTimeValue / 100 * damageMultiplier * charge;
         return (damage > damageMax.runTimeValue) ? damageMax.runTimeValue : damage;
     }
 }
