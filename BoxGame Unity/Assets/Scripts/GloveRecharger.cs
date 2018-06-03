@@ -7,6 +7,7 @@ public class GloveRecharger : MonoBehaviour {
     public float chargeValue = 1;
 
     public void OnTriggerEnter(Collider other) {
+        Debug.Log("recharge");
         Glove glove = other.GetComponent<Glove>();
         if (glove != null) {
             glove.Enable(true);

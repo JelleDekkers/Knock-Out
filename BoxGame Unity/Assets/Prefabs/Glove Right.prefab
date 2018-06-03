@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 54420512977841632}
   - component: {fileID: 114966236280595192}
   - component: {fileID: 114016784653668666}
+  - component: {fileID: 114397419919744666}
   m_Layer: 0
   m_Name: Glove_Right
   m_TagString: Untagged
@@ -158,6 +159,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114397419919744666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918305145826144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b59afaaf26eb1e4da58255020239e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charge: {fileID: 11400000, guid: 61c54bc2f0d456c47907c0a6b6869cf7, type: 2}
 --- !u!114 &114966236280595192
 MonoBehaviour:
   m_ObjectHideFlags: 1
